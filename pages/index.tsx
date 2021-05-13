@@ -22,18 +22,6 @@ function Home() {
     dispatch(incrementCounter());
   }
 
-  function onSearchText(text) {
-    let filtered;
-    if (text) {
-      filtered = users.filter((user) =>
-        user.name.toLowerCase().includes(text.toLowerCase())
-      );
-    } else {
-      filtered = users;
-    }
-    getListUsers();
-  }
-
   const generateUsers = () => {
     return (
       <>
